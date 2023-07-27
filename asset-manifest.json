@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/lets-eat-food-app/static/css/main.26ed4668.css",
+    "main.js": "/lets-eat-food-app/static/js/main.08f5a3c7.js",
+    "static/media/logo.jpg": "/lets-eat-food-app/static/media/logo.5f5d9da52d22bc96a443.jpg",
+    "static/media/cart.webp": "/lets-eat-food-app/static/media/cart.96a311dafffae82f13b9.webp",
+    "index.html": "/lets-eat-food-app/index.html",
+    "main.26ed4668.css.map": "/lets-eat-food-app/static/css/main.26ed4668.css.map",
+    "main.08f5a3c7.js.map": "/lets-eat-food-app/static/js/main.08f5a3c7.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.26ed4668.css",
+    "static/js/main.08f5a3c7.js"
+  ]
+}
