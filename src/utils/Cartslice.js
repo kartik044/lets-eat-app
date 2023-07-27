@@ -25,12 +25,10 @@ import { createSlice } from "@reduxjs/toolkit";
         }, 
         Subtotal:(state)=>{
             let sum=0;
-            state.cartItems.forEach((i)  => sum +=i.price/100 ? i.price/100 :i.defaultPrice/100 )
+            state.cartItems.forEach((i)  => sum +=i.price/100 ? i.price/100 :i.defaultrice/100 )
             state.Totalprice=sum
         },
-        search:(state,action)=>{
-             state.searchtext.push(action.payload)
-        }
+        
         
     }
    })  

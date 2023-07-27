@@ -8,24 +8,24 @@ const Itemlist = ({item}) => {
  const dispatch=useDispatch()
      const handleadd=(item)=>{
         dispatch(addItem(item.card.info))
-        dispatch({type:Subtotal})
+        dispatch({type:'Subtotal'})
         toast.success("Added to cart")
      }
   return (
-    <div>
+    <div className='sm:flex sm:flex-col md:flex-none'>
      {item.map((item)=>(
-<div className="p-2 m-2 border-b-2 border-red-300 text-red-600 font-mono text-left flex"
+<div className="p-2 m-2 border-b-2 border-red-300 text-red-600 font-mono text-left flex "
         key={item?.card?.info?.id} >
           
             
-    <div className='p-2 w-9/12'>
+    <div className='p-2 md:w-9/12 sm-w-full sm:flex-col'>
         <div>
             <span className=' font-bold ' >{item?.card?.info?.name}</span>
             <span className=' font-bold '> -₹{item?.card?.info?.price ?  item?.card?.info?.price/100 : item?.card?.info?.defaultPrice/100 }  </span>
         </div>
         <p className='text-xs '>{item?.card?.info?.description}</p>
     </div>
-        <div className='w-3/12'> 
+        <div className='w-3/12 sm:flex sm:flex-col'> 
         <div className='absolute'>
         <button className=' p-2 mx-14 bg-red-300 text-white shadow-lg rounded-lg text-xs ' onClick={()=>{handleadd(item)}}>Add +</button>
         </div>

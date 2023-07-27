@@ -25,22 +25,22 @@ const CartMenuDetails = ({imageId,name,price,defaultPrice,id}) => {
     <div className='bg-slate-50 h-[cal(100-16)] mt-5 w-full  text-center '>
       
       <div className="   ">
-        <div className='   justify-between   flex flex-row w-8/12   ml-8 bg-red-50  place-items-center text-red-700 font-mono'>
+        <div className='   justify-between   flex flex-row w-8/12   ml-8 bg-red-50  place-items-center text-red-700 font-mono sm:gap-3'>
               
           
             <div>
               <img className='w-14 h-14 my-2' src={CDN_URL+imageId} alt="img" />
             </div>
-            <div className='text-2xl inline-block w-96  truncate'>{name}</div>
-            <div className='flex gap-4'>
+            <div className=' sm:text-base md:text-2xl inline-block md:w-96 sm:w-72  truncate'>{name}</div>
+            <div className='flex md:gap-4 sm:gap-2'>
               {/* <button className='text-2xl hover:text-red-500'> <IoBagAdd /></button> */}
               {/* <div className='text-2xl'>1</div> */}
               {/* <button className='text-2xl hover:text-red-500'> <IoBagRemove /></button> */}
             </div>
-            <span className='text-xl font-mono'>
+            <span className='md:text-xl sm:text-base font-mono'>
             ₹ : {price/100 ? price/100 : defaultPrice/100}
             </span>
-            <div className='flex place-items-center text-2xl text-red-700 hover:text-red-300 cursor-pointer' onClick={()=>{deletehandle(id)}}>
+            <div className='flex place-items-center sm:text-base md:text-2xl text-red-700 hover:text-red-300 cursor-pointer' onClick={()=>{deletehandle(id)}}>
               <AiFillDelete />
             </div>
           </div>
