@@ -8,7 +8,7 @@ const Itemlist = ({item}) => {
  const dispatch=useDispatch()
      const handleadd=(item)=>{
         dispatch(addItem(item.card.info))
-        dispatch({type:'Subtotal'})
+        dispatch(Subtotal())
         toast.success("Added to cart")
      }
   return (

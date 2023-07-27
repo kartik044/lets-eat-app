@@ -16,7 +16,7 @@ const CartMenuDetails = ({imageId,name,price,defaultPrice,id}) => {
     const dispatch=useDispatch()
     const deletehandle=(id)=>{
         dispatch(removeItem(id))
-        dispatch({type:Subtotal})
+        dispatch(Subtotal())
         toast.success("Remove item Sucessfully")
     }
   return (
