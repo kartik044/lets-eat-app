@@ -21,7 +21,7 @@ const Header = () => {
 
   return (
     // main Header
-    <div className=  " bg-red-50 w-full h-20 flex space-x-2  justify-between align-middle  shadow-red-300 shadow-md transition-all mb-5"  >
+    <div className=  " bg-red-50 w-full h-20 flex space-x-2  justify-between align-middle  shadow-red-300 shadow-md transition-all mb-5 static"  >
         <Link to= "/" >
         <div> <img className='h-20 w-20 ml-2 p-1' src={logo} alt="" />
         </div> </Link>

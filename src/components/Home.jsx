@@ -21,10 +21,14 @@ const Home = () => {
     const fetchData  =  async()=>{
         const data= await fetch('https://www.swiggy.com/dapi/restaurants/list/v5?lat=28.4594965&lng=77.0266383&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING');
         const jsonData = await data.json()
+        console.log(jsonData.data?.cards[1].card.card.gridElements.infoWithStyle.restaurants
+
+          )
+        // console.log(jsonData?.cards?.gridElements?.infoWithStyle?.restaurants)
         // console.log(jsonData?.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle?.restaurants)
-          setlistofRestaurant(jsonData?.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle?.restaurants )
+          setlistofRestaurant(jsonData?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants )
         // console.log({setlistofRestaurant})
-            setFilterRestaurant(jsonData?.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle?.restaurants )
+            setFilterRestaurant(jsonData?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants )
       }
        
       const searchclick=()=>{
@@ -40,7 +44,7 @@ const Home = () => {
       // if (listofRestaurant.length===0) return <Shiimer/>
       return ( listofRestaurant.length===0 ?  (<Shiimer/>)  : 
       //  return(
-      ( <div>
+      ( <div className='bg-slate-50  shadow-sm'>
           <div className='flex sm:flex  sm:shrink   ' >
         <div><input className=' bg-white rounded-md text-red-700   w-32 md:w-60 h-6 p-2 border-red-400 border-2 hover:bg-red-50 mx-2 '  value={searchtext}  onChange={(e)=>setSearchText(e.target.value)}      type="search"  placeholder ='Search here'  /></  div>
         
